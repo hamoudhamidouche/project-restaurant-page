@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.reset-style {
+    all: unset;
+}
+
+#content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.hero-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4em;
+    font-style: italic;
+    color: #D6C0AB;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 2em;
+}
+
+header > h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #4e463f;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    gap: 2em;
+    width: 50%;
+}
+
+nav > button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav > button:hover {
+    color: #4e463f;
+}
