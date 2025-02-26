@@ -1,18 +1,31 @@
-import { displayInit } from "./initial.js";
-import { displayMenu } from "./menu.js";
-import { displayContact } from "./contact.js";
 import "./styles.css";
+import initialPageLoad from './initial.js';
+import menuPageLoad from './menu.js';
+import aboutPageLoad from './about.js';
 
-const buttons = document.querySelectorAll(".nav-button");
-
-displayInit();
-
-buttons.forEach(button => {
-    if(button.textContent === "Home") {
-        button.addEventListener("click", displayInit);
-    } else if (button.textContent === "Menu") {
-        button.addEventListener("click", displayMenu);
-    } else {
-        button.addEventListener("click", displayContact);
+function clearContent() {
+    const mainContent = document.querySelector("#content");
+    if (mainContent) {
+      mainContent.innerHTML = ""; 
     }
+};
+
+initialPageLoad();
+
+const home = document.querySelector("#home");
+const menu = document.querySelector("#menu");
+const about = document.querySelector("#about");
+
+
+home.addEventListener("click", () => {
+    clearContent();
+    initialPageLoad();
+});
+menu.addEventListener("click", () => {
+    clearContent();
+    menuPageLoad();
+});
+about.addEventListener("click", () => {
+    clearContent();
+    aboutPageLoad();
 });

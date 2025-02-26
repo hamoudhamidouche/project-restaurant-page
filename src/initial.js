@@ -1,20 +1,24 @@
-import bowl from "./bowl.jpg";
-
-export const displayInit = () => {
+export default function initialPageLoad() {
     const content = document.querySelector("#content");
-    content.innerHTML = "";
-    content.style.backgroundImage = `url(${bowl})`;
-    content.style.display = "flex";
-    content.style.justifyContent = "center";
-    content.style.alignItems = "center";
+    const card = document.createElement("div");
 
-    
-    const heroTitle = document.createElement("h1");
-    heroTitle.textContent = "Elegance of Fire and Flavor";
-    heroTitle.style.color = "white";
-    heroTitle.classList.add("hero-title");
-    
-    content.appendChild(heroTitle);
-};
+    card.classList.add("card");
 
-displayInit();
+    const title = document.createElement("h1");
+    
+    title.textContent = "Silver Spoons";
+
+    const imgHold = document.createElement("div");
+
+    imgHold.classList.add("img-holder");
+
+    const text = document.createElement("p");
+    
+    text.innerHTML = "He, who were not fed love with silver spoon,<br> will learn to lick it off the knives.";
+
+    card.appendChild(title);
+    card.appendChild(imgHold);
+    card.appendChild(text);
+    content.appendChild(card);
+
+}
